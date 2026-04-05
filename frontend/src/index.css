@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Amplify Authenticator theme overrides */
+[data-amplify-authenticator] {
+  --amplify-colors-brand-primary-60: #2563eb;
+  --amplify-colors-brand-primary-80: #1d4ed8;
+  --amplify-colors-brand-primary-90: #1e40af;
+  --amplify-colors-brand-primary-100: #1e3a8a;
+}

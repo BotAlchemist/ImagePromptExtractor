@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+dist/
+.env.local
+.env.*.local
+
+# CDK outputs
+infrastructure/cdk.out/
+infrastructure/dist/
+
+# Misc
+.DS_Store
+*.log
