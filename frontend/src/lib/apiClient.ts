@@ -1,6 +1,8 @@
 import { fetchAuthSession } from 'aws-amplify/auth';
 
-const API_URL = (import.meta.env.VITE_API_URL as string).replace(/\/$/, '');
+const rawApiUrl = import.meta.env.VITE_API_URL as string | undefined;
+if (!rawApiUrl) throw new Error('VITE_API_URL is not set. Add it to your Amplify environment variables.');
+const API_URL = rawApiUrl.replace(/\/$/, '');
 
 async function getAuthHeader(): Promise<{ Authorization: string }> {
   const session = await fetchAuthSession();
